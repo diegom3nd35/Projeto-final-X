@@ -35,6 +35,6 @@ public class MainActivity extends IntroActivity {
                 .build()
 
         );
-        
+
     }
 }
