@@ -1,40 +1,35 @@
 package com.example.diego.financas;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
+import com.example.diego.financas.Activity.CadastroActivity;
+import com.example.diego.financas.Activity.LoginActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.heinrichreimersoftware.materialintro.app.IntroActivity;
-import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 
-public class MainActivity extends IntroActivity {
 
+public class MainActivity extends AppCompatActivity
+{
 
     private DatabaseReference referencia = FirebaseDatabase.getInstance().getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_main); --> Desativando a tela principal
-
-        //Deixando os botões invisiveis
-        setButtonBackVisible(false);
-        setButtonNextVisible(false);
-
-        //Slide 1
-        addSlide(new FragmentSlide.Builder()
-                .background(R.color.mi_icon_color_light)
-                .fragment(R.layout.slide_1)
-                .build()
-        );
-        //Slide 2
-        addSlide(new FragmentSlide.Builder()
-                .background(R.color.mi_icon_color_light)
-                .fragment(R.layout.slide_2)
-                .build()
-
-        );
-
+        setContentView(R.layout.activity_main);
     }
+
+    //Navegar pra tela de Login
+    public void botaoEntrar(View view){
+        startActivity(new Intent(this, LoginActivity.class));
+    }
+
+    //Navegar para a tela de Cadastro
+    public void botaoCadastrar(View view){
+        startActivity(new Intent(this, CadastroActivity.class));
+    }
+
 }
