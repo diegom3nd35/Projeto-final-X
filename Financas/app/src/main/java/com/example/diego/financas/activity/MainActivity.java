@@ -1,12 +1,10 @@
-package com.example.diego.financas.Activity;
+package com.example.diego.financas.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.diego.financas.Activity.CadastroActivity;
-import com.example.diego.financas.Activity.LoginActivity;
 import com.example.diego.financas.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
