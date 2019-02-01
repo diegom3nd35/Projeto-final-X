@@ -77,9 +77,8 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     public void cadastraUsuario(){
-        //recupera o objeto/instancia do Firebase que permite fazer autenticacao do usuario
+        //recupera o objeto do Firebase que permite fazer autenticacao do usuario
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
-
         //cadastro do usuario
         autenticacao.createUserWithEmailAndPassword(usuario.getEmail(),
                 usuario.getSenha()).addOnCompleteListener(this,
@@ -88,12 +87,13 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    Toast.makeText(CadastroActivity.this,
-                            "Sucesso ao cadastrar usuario! ",
-                            Toast.LENGTH_LONG).show();
+                    finish();
+                    //Toast.makeText(CadastroActivity.this,
+                      //      "Sucesso ao cadastrar usuario! ",
+                        //    Toast.LENGTH_LONG).show();
                 }else{
 
-                    // Tratando exceçoes
+                    // Capturando erro de exceçoes
                     String excecao = "";
                     try{
                         throw task.getException();
