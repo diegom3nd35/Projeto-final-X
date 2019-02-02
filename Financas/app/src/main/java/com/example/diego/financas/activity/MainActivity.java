@@ -31,14 +31,14 @@ public class MainActivity extends AppCompatActivity
 
     //Navegar pra tela de Login
     public void botaoEntrar(View view){
-        startActivity(new Intent(this,
-                LoginActivity.class));
+        //startActivity(new Intent(this,
+          //      LoginActivity.class));
     }
 
     //Navegar para a tela de Cadastro
     public void botaoCadastrar(View view){
-        startActivity(new Intent(this,
-                CadastroActivity.class));
+        //startActivity(new Intent(this,
+          //      CadastroActivity.class));
     }
 
     public void verificarUsuarioLogado(){
