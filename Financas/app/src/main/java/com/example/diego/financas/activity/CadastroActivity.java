@@ -3,12 +3,14 @@ package com.example.diego.financas.activity;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.diego.financas.R;
+import com.example.diego.financas.auxiliar.CriptografiaBase64;
 import com.example.diego.financas.configuracao.ConfiguracaoFirebase;
 import com.example.diego.financas.modelo.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -87,7 +89,11 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    finish(); //finalizando tela
+
+                    String idUsuario = CriptografiaBase64.codificarBase64(usuario.getEmail());
+                    usuario.setIdUsuario(idUsuario);
+                    usuario.salvar();
+                    finish();
                 }else{
 
                     // Capturando erro de exceçoes
