@@ -10,6 +10,8 @@ import android.view.View;
 
 import com.example.diego.financas.R;
 
+import java.util.Base64;
+
 public class PrincipalActivity extends AppCompatActivity {
 
     @Override
@@ -28,7 +30,6 @@ public class PrincipalActivity extends AppCompatActivity {
             }
         });*/
     }
-
     public void adicionarDespesa(View view){
         startActivity(new Intent(this,
                 DespesaActivity.class));

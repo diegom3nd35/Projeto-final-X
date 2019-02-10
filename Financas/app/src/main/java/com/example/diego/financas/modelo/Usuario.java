@@ -1,13 +1,29 @@
 package com.example.diego.financas.modelo;
 
+import com.example.diego.financas.configuracao.ConfiguracaoFirebase;
+import com.google.firebase.database.DatabaseReference;
+
+
 public class Usuario {
 
+    private String idUsuario;
     private String nome;
-    private String Email;
-    private String Senha;
+    private String email;
+    private String senha;
 
     public Usuario() {
     }
+    public void salvar(){
+       DatabaseReference firebase = ConfiguracaoFirebase.getFirebaseDatabase();
+        firebase.child("usuarios")
+                .child(this.idUsuario)
+                .setValue(this);
+    }
+
+
+    public String getIdUsuario() { return idUsuario; }
+
+    public void setIdUsuario(String idUsuario) {this.idUsuario = idUsuario; }
 
     public String getNome() {
         return nome;
@@ -18,19 +34,19 @@ public class Usuario {
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getSenha() {
-        return Senha;
+        return senha;
     }
 
     public void setSenha(String senha) {
-        Senha = senha;
+        this.senha = senha;
     }
 
 
