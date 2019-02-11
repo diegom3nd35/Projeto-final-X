@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity
                 CadastroActivity.class));
     }
 
+
     public void verificarUsuarioLogado(){
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
-       autenticacao.signOut();
         if (autenticacao.getCurrentUser() != null){
             abrirTelaPrincipal();
         }
