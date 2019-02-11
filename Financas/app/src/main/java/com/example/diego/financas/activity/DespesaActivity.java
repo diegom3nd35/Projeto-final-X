@@ -48,7 +48,7 @@ public class DespesaActivity extends AppCompatActivity {
 
     public void salvarDespesa(View view){
 
-        if (validarCamposDespesas()){
+        if (validarCamposDespesa()){
             movimentacao = new Movimentacao();
             String data = campoData.getText().toString();
             Double valorRecuperado = Double.parseDouble(campoValor.getText().toString());
@@ -65,7 +65,7 @@ public class DespesaActivity extends AppCompatActivity {
         }
     }
 
-    public Boolean validarCamposDespesas(){
+    public Boolean validarCamposDespesa(){
         String textoValor = campoCategoria.getText().toString();
         String textoData = campoData.getText().toString();
         String textoCategoria = campoCategoria.getText().toString();
