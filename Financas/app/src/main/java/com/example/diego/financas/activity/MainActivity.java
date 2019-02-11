@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity
 
     public void verificarUsuarioLogado(){
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
-       // autenticacao.signOut();
+       autenticacao.signOut();
         if (autenticacao.getCurrentUser() != null){
             abrirTelaPrincipal();
         }

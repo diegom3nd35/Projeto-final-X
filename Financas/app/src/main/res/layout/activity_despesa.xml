@@ -47,7 +47,8 @@
             android:id="@+id/edit_campo_data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ex: 12/02/19" />
+            android:hint="Ex: 12/02/19"
+            android:onClick="salvarDespesa" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -133,6 +134,7 @@
         android:layout_marginBottom="24dp"
         android:clickable="true"
         android:focusable="true"
+        android:onClick="salvarDespesa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
