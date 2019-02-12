@@ -7,20 +7,20 @@ O app irá ajudar no controle de gastos financeiros, o usuário poderá se cadas
 
 ## REQUISITOS 
 
-API 19: Android 6.0 (Marshmallow)
-Liguagem: Java
-Banco de dados: Firebase 
+- API 19: Android 6.0 (Marshmallow)
+- Liguagem: Java
+- Banco de dados: Firebase 
   
-FUNCIONALIDADES
+## FUNCIONALIDADES
 
- Cadastra Usuario
- Loga Usuario Cadastrado 
- Adiciona despesa -
- Adiciona receita +
- Verifica as despesas e receitas no mes desejado
- Mantem os dados de receita e despesa persistente referente a cada usuario logado
- Mostra o saldo e nome do usuario logado
- Desloga da aplicação
+- Cadastra Usuario
+- Loga Usuario Cadastrado 
+- Adiciona despesa -
+- Adiciona receita +
+- Verifica as despesas e receitas no mes desejado
+- Mantem os dados de receita e despesa persistente referente a cada usuario logado
+- Mostra o saldo e nome do usuario logado
+- Desloga da aplicação
  
  
  
