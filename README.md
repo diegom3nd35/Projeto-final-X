@@ -6,7 +6,11 @@ O app irá ajudar no controle de gastos financeiros, o usuário poderá se cadas
 
 REQUISITOS
 
-  API 19: Android 6.0 (Marshmallow)
-  Liguagem Java
-  Banco de dados: Firebase
+  *API 19: Android 6.0 (Marshmallow)*
+  *Liguagem: Java*
+  *Banco de dados: Firebase* 
+  
+ 
+  
+ 
   
