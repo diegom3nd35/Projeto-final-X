@@ -10,6 +10,7 @@ REQUISITOS
   *Liguagem: Java* |
   *Banco de dados: Firebase* 
   
+FUNCIONALIDADES
  
   
  
