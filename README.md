@@ -1,5 +1,5 @@
 # App-Finanças 
-![logo](https://user-images.githubusercontent.com/33493260/52653674-9ab65e00-2ed7-11e9-8928-8ba53e199808.jpg)
+![logo](https://user-images.githubusercontent.com/33493260/52654878-1a452c80-2eda-11e9-9cee-b802348e0455.jpg)
 
 ## VISÃO GERAL 
 
