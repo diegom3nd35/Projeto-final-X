@@ -15,8 +15,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.diego.financas.R;
+import com.example.diego.financas.adapter.AdapterMovimentacao;
 import com.example.diego.financas.auxiliar.CriptografiaBase64;
 import com.example.diego.financas.configuracao.ConfiguracaoFirebase;
+import com.example.diego.financas.modelo.Movimentacao;
 import com.example.diego.financas.modelo.Usuario;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -28,7 +30,9 @@ import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 import com.prolificinteractive.materialcalendarview.OnMonthChangedListener;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Base64;
+import java.util.List;
 
 public class PrincipalActivity extends AppCompatActivity {
 
@@ -44,6 +48,8 @@ public class PrincipalActivity extends AppCompatActivity {
     private ValueEventListener valueEventListenerUsuario;
 
     private RecyclerView recyclerView;
+    private AdapterMovimentacao adapterMovimentacao;
+    private List<Movimentacao> movimentacoes = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,12 +65,13 @@ public class PrincipalActivity extends AppCompatActivity {
         configuraCalendarView();
 
         // Configurando adapter
+        adapterMovimentacao = new AdapterMovimentacao(movimentacoes,this);
 
         // configurando RecyclerView
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager( layoutManager);
         recyclerView.setHasFixedSize(true);
-        
+        recyclerView.setAdapter(adapterMovimentacao);
 
 
 
