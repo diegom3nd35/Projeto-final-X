@@ -13,7 +13,10 @@ public class Movimentacao {
     private String categoria;
     private String descricao;
     private String tipo;
-    private  double valor;
+    private double valor;
+    private String chave;
+
+
 
     public Movimentacao(){
     }
@@ -30,6 +33,10 @@ public class Movimentacao {
                 .push()
                 .setValue(this);
     }
+
+    public String getChave() { return chave; }
+
+    public void setChave(String chave) { this.chave = chave; }
 
     public String getData() { return data; }
 

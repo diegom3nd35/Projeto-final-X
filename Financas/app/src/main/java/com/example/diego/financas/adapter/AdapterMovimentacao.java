@@ -29,7 +29,6 @@ public class AdapterMovimentacao extends RecyclerView.Adapter<AdapterMovimentaca
         return new MyViewHolder(itemLista);
     }
 
-
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Movimentacao movimentacao = movimentacoes.get(position);
@@ -39,11 +38,15 @@ public class AdapterMovimentacao extends RecyclerView.Adapter<AdapterMovimentaca
         holder.categoria.setText(movimentacao.getCategoria());
 
         if ( movimentacao.getTipo().equals("despesa")) {
-            holder.valor.setTextColor(context.getResources().getColor(R.color.colorAccent));
-            holder.valor.setText("-" + movimentacao.getValor());
+            holder.valor.setTextColor(context.getResources().getColor(R.color.colorPrimaryDespesa));
+            holder.valor.setText("R$ -" + movimentacao.getValor());
+        }
+
+        if ( movimentacao.getTipo().equals("receita")) {
+            holder.valor.setTextColor(context.getResources().getColor(R.color.colorAccentReceita));
+            holder.valor.setText("R$ +" + movimentacao.getValor());
         }
     }
-
 
     @Override
     public int getItemCount() {
