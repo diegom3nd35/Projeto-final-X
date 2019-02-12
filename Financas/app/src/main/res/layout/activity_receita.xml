@@ -47,7 +47,8 @@
             android:id="@+id/edit_campo_data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ex: 12/02/19" />
+            android:hint="Ex: 12/02/19"
+            android:inputType="textPersonName"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -66,7 +67,8 @@
             android:id="@+id/edit_campo_categoria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ex: Salario" />
+            android:hint="Ex: Salario"
+            android:inputType="textPersonName"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -84,7 +86,8 @@
             android:id="@+id/edit_campo_descricao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ex: Salario do mês de janeiro" />
+            android:hint="Ex: Salario do mês de janeiro"
+            android:inputType="textPersonName"/>
     </android.support.design.widget.TextInputLayout>
 
     <TextView
