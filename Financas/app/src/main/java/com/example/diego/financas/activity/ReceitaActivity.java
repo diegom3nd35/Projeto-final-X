@@ -58,6 +58,7 @@ public class ReceitaActivity extends AppCompatActivity {
             atualizarReceita(receitaAtualizada);
 
             movimentacao.salvar(data);
+            finish();
         }
     }
 
@@ -71,9 +72,6 @@ public class ReceitaActivity extends AppCompatActivity {
             if( !textoData.isEmpty()){
                 if( !textoCategoria.isEmpty()){
                     if( !textoDescricao.isEmpty()){
-                        Toast.makeText(ReceitaActivity.this,
-                                "REGISTRADO!",
-                                Toast.LENGTH_LONG).show();
                         return true;
                     }else{
                         Toast.makeText(ReceitaActivity.this,

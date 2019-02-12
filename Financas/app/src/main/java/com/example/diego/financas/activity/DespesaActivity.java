@@ -62,6 +62,7 @@ public class DespesaActivity extends AppCompatActivity {
             atualizarDespesa(despesaAtualizada);
 
             movimentacao.salvar(data);
+            finish();
         }
     }
 
@@ -75,9 +76,6 @@ public class DespesaActivity extends AppCompatActivity {
             if( !textoData.isEmpty()){
                 if( !textoCategoria.isEmpty()){
                     if( !textoDescricao.isEmpty()){
-                        Toast.makeText(DespesaActivity.this,
-                                "REGISTRADO!",
-                                Toast.LENGTH_LONG).show();
                         return true;
                     }else{
                         Toast.makeText(DespesaActivity.this,
