@@ -125,9 +125,10 @@ public class PrincipalActivity extends AppCompatActivity {
                 movimentacaoReferencia = firebaseReferencia.child("movimentacao")
                         .child(idUsuario)
                         .child(mesAnoSelecionado);
-                
+
                 movimentacaoReferencia.child(movimentacao.getChave()).removeValue();
                 adapterMovimentacao.notifyItemRemoved(position);
+                atualizarSaldo();
 
             }
         });
@@ -141,6 +142,23 @@ public class PrincipalActivity extends AppCompatActivity {
 
         AlertDialog alert = alertDialog.create();
         alert.show();
+    }
+
+    public void atualizarSaldo(){
+
+        String emailUsuario = autenticacao.getCurrentUser().getEmail();
+        String idUsuario = CriptografiaBase64.codificarBase64(emailUsuario);
+        usuarioReferencia = firebaseReferencia.child("usuarios").child(idUsuario);
+
+        if (movimentacao.getTipo().equals("receita")){
+            receitaTotal -= movimentacao.getValor();
+            usuarioReferencia.child("receitaTotal").setValue(receitaTotal);
+        }
+
+        if (movimentacao.getTipo().equals("despesa")){
+            despesaTotal -= movimentacao.getValor();
+            usuarioReferencia.child("despesaTotal").setValue(despesaTotal);
+        }
     }
 
     public void recuperaMovimentacoes() {
@@ -186,7 +204,7 @@ public class PrincipalActivity extends AppCompatActivity {
 
                 DecimalFormat decimalFormat = new DecimalFormat("0.00");
                 String resultadoFormatado = decimalFormat.format(resumoUsuario);
-                textoSaldacao.setText("Oi, " + usuario.getNome());
+                textoSaldacao.setText("Oi, " + usuario.getNome() + "!");
                 textoSaldo.setText("R$ " + resultadoFormatado);
             }
             @Override

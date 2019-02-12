@@ -23,24 +23,28 @@
             android:text="Carregando ..."
             android:textAlignment="center"
             android:textColor="@color/common_google_signin_btn_text_dark_default"
-            android:textSize="18sp" />
+            android:textSize="20sp"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/textView_saldo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
             android:text="R$ 0,00"
             android:textAlignment="center"
             android:textColor="@color/common_google_signin_btn_text_dark_default"
-            android:textSize="24sp" />
+            android:textSize="28sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Saldo geral"
+            android:text="Saldo atual"
             android:textAlignment="center"
-            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <com.prolificinteractive.materialcalendarview.MaterialCalendarView
