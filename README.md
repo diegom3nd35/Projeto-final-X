@@ -21,6 +21,10 @@ O app irá ajudar no controle de gastos financeiros, o usuário poderá se cadas
 - Mantem os dados de receita e despesa persistente referente a cada usuario logado
 - Mostra o saldo e nome do usuario logado
 - Desloga da aplicação
+
+## DIAGRAMA DE CLASSE
+
+![modelo](https://user-images.githubusercontent.com/33493260/52659892-998c2d80-2ee5-11e9-84b9-24818a193322.png)
  
  
  
