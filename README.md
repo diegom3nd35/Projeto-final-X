@@ -24,8 +24,7 @@ O app irá ajudar no controle de gastos financeiros, o usuário poderá se cadas
 - Desloga da aplicação
 
 ## DIAGRAMA DE CLASSE
-
-![modelo](https://user-images.githubusercontent.com/33493260/52659892-998c2d80-2ee5-11e9-84b9-24818a193322.png)
+![modelo - copia](https://user-images.githubusercontent.com/33493260/52680788-e8a38400-2f20-11e9-8d8b-b46035124923.png)
 
 ## STORYBOARD
 
