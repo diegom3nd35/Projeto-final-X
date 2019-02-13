@@ -29,6 +29,18 @@ O app irá ajudar no controle de gastos financeiros, o usuário poderá se cadas
 
 ## STORYBOARD
 
+- Tela inicial
+- Usuario faz cadastro
+- Usuario loga
+- Abre a tela principal
+- Botão de despesas e receitas é pressionado
+- Registrano uma receita
+- Registrando uma despesa
+- Movimentações na tela pricipal
+- Saindo do aplicativo
+
+![storyboard-1](https://user-images.githubusercontent.com/33493260/52680050-4aaeba00-2f1e-11e9-84f5-7489cc6cb98b.jpg)
+
 
 
  
